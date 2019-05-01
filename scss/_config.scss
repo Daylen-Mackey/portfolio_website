@@ -1,4 +1,4 @@
-$primary-color: rgb(54, 54, 54);
+$primary-color: rgb(71, 70, 70);
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -6,6 +6,16 @@ $background-opacity: 0.6;
 
 @mixin easeOut {
   transition: all 0.7s ease-out;
+}
+
+//Setting Text Color:
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
+  }
 }
 
 //Media Query Mixins
