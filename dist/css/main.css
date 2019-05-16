@@ -128,9 +128,16 @@ h3 {
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding: 0.2rem 1rem;
     background: rgba(76, 75, 75, 0.5); }
+  h1.sm-heading-2,
+  h2.sm-heading-2,
+  h3.sm-heading-2 {
+    margin-top: 2rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(76, 75, 75, 0.5);
+    margin-bottom: 0; }
 
 a {
   color: white;
@@ -188,6 +195,8 @@ main {
   background: #545353;
   padding: 0.5 rem;
   border-bottom: 5px solid #eece1a; }
+  .job ul {
+    padding-right: 0.25rem; }
 
 .projects {
   display: grid;
@@ -201,22 +210,59 @@ main {
       border-color: #eece1a;
       transition: all 0.7s ease-out; }
 
-.btn, .btn-dark, .btn-light {
+.btn, .btn-dark, .btn-light, .collapsible {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-dark:hover, .btn-light:hover, .collapsible:hover {
     background: #eece1a;
     color: black; }
 
 .btn-dark {
   background: black;
-  color: white; }
+  color: white;
+  justify-content: center; }
 
 .btn-light {
   background: #c6c6c6;
   color: black; }
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  width: 100%;
+  background: black;
+  justify-content: left;
+  color: white;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1rem; }
+  .collapsible:hover {
+    background: #eece1a;
+    color: black;
+    cursor: pointer;
+    transition: all 0.7s ease-out; }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Style the collapsible content. Note: hidden by default */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px white solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem; }
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden; }
 
 #main-footer {
   text-align: center;
